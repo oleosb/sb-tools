@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/cronometro.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <title>sbtools</title>
+</head>
+<body>        
+        <div class="theme-container">
+                <img src="assets/imgs/dark-mode.svg" alt="" class="light">
+        </div>
+
+        <nav class="navbar">
+                <div class="navbar-brand">
+                        <img src="assets/imgs/logoblue.png" alt="sblogo" class="logo">
+                </div>
+
+                <div class="menu-toggle close">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                </div>
+
+                <div class="menu-container">
+                        <h3 class="title">MENU</h3>
+
+                        <ul class="navbar-menu">
+                                <li><a href="home.html" class="active">cronômetro</a></li>
+                                <li><a href="timer.html">timer</a></li>
+                                <li><a href="pomodoro.html">pomodoro</a></li>
+                                <li><a href="tabata.html">tabata</a></li>
+                        </ul>
+                </div>
+        </nav>
+
+        <main class="crono-container">
+                <div class="crono-display">
+                        <div class="display-container">
+                                <div class="hrs">00</div>
+                                <span>:</span>
+                                <div class="mins">00</div>
+                                <span>:</span>
+                                <div class="secs">00</div>
+                                <span>:</span>
+                                <div class="tens">00</div>
+                        </div>
+                </div>
+
+                <div class="action-btns">
+                        <a class="start btn show" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">iniciar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="reset btn show" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">parar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="pause btn" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">pausar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="volta btn" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">volta</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                </div>
+
+                <div class="turn-container">
+                </div>
+        </main>
+
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/cronometro.js"></script>
+</body>
+</html>

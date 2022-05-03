@@ -1,0 +1,193 @@
+.timer-container{
+        height: 100vh;
+        width: 100vw;
+        padding: 5%;
+        font-family: 'Bebas Neue', cursive;
+        display: grid;
+        grid-template-areas: 'display' 'btns';
+        color: var(--primary-color);
+        position: unset;
+        overflow-x: hidden !important;
+}
+
+.timer-container,
+.timer-container *{
+        z-index: 0;
+}
+
+/**DISPLAY */
+.timer-display{
+        grid-area: display;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: max(.5em, 8px);
+        padding-bottom: max(.5em, 8px);
+}
+
+.display-container{
+        display: inline-flex;
+        font-size: 8em;
+        line-height: .86em;
+        height: .75em;
+        overflow: hidden;
+}
+
+.display-container > div{
+        font-size: 1em;
+}
+
+.display-container > div.tens{
+        font-size: .5em;
+        line-height: .86em;
+        height: .74em;
+        align-self: flex-end;
+}
+
+.display-container > span{
+        font-size: .5em;
+        line-height: 1.5em;
+}
+
+
+/**CLOCK SETTINGS */
+.clockSettings-container{
+        position: absolute;
+        top: 0;
+        right:-400px;
+        width: 400px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--secondary-color);
+        font-family: 'Oswald', sans-serif;
+        transition: right .4s ease;
+}
+
+.clockSettings-container.show{
+        right: 0;
+}
+
+.clockSettings-container > ul{
+        width: 100%;
+        text-align: center;
+}
+
+.clockSettings-container > ul > li{
+        width: 75%;
+        padding: .5em;
+        border-bottom: 1px solid #8c8c8c9a;
+        text-align: center;
+        margin: 0 auto;
+}
+
+.clockSettings-container > ul > li:first-of-type{
+        border-top: 1px solid #8c8c8c9a;
+}
+
+.inpt-container{
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+}
+
+.inpt-container > input{
+        font-size: max(2.5em, 36px);
+        font-family: 'Bebas Neue', cursive;
+        width: 1.1em;
+        height: 1.1em;
+        text-align: center;
+        color: var(--secondary-color);
+        background-color: transparent;
+        border: none;
+        padding: .1em;
+        border-bottom: 1px solid transparent;
+}
+
+.inpt-container > input:focus{
+        border-bottom: 1px solid var(--secondary-color);
+        outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.next,
+.prev{
+        font-size: max(2em, 36px);
+        cursor: pointer;
+        text-align: center;
+}
+
+.next:active,
+.prev:active{
+        transform: scale(.95);
+}
+
+.clockSettings-container .btn{
+        margin: 20px 0 0 0;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        font-family: 'Bebas Neue', cursive;
+}
+
+.clockSettings-container .btn span{
+        background: var(--primary-color);
+}
+
+.clockSettings-container .btn:hover{
+        background-color: var(--secondary-color);
+}
+
+.clockSettings-container .btn:hover p{
+        color: var(--primary-color) !important;
+}
+
+.warning{
+        font-size: 13px;
+        color: #f00;
+        border: none !important;
+}
+
+
+/**RESPONSIVE */
+@media(max-width: 426px){
+        .clockSettings-container{
+                width: 100vw;
+        }
+}
+
+@media (max-width: 375px) and (min-width: 321px){
+        .display-container{
+                font-size: 7.5em;
+        }
+
+        .btn .text {
+                font-size: 1.3em;
+        }
+}
+
+@media (max-width: 320px){
+        .display-container{
+                font-size: 7.2em;
+        }
+
+        .btn .text {
+                font-size: 1.3em;
+        }
+}

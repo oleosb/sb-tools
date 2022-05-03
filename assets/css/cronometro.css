@@ -1,0 +1,99 @@
+.crono-container{
+        height: 100vh;
+        width: 100vw;
+        padding: 5%;
+        font-family: 'Bebas Neue', cursive;
+        display: grid;
+        grid-template-areas: 'display' 'display' 'display' 'btns' 'turn';
+        color: var(--primary-color);
+        position: unset;
+}
+
+.crono-container,
+.crono-container *{
+        z-index: 0;
+}
+
+/**DISPLAY */
+.crono-display{
+        grid-area: display;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: max(.5em, 8px);
+        padding-bottom: max(.5em, 8px);
+}
+
+.display-container{
+        display: inline-flex;
+        font-size: 8em;
+        line-height: .86em;
+        height: .75em;
+        overflow: hidden;
+}
+
+.display-container > div{
+        font-size: 1em;
+}
+
+.display-container > div.tens{
+        font-size: .5em;
+        line-height: .86em;
+        height: .74em;
+        align-self: flex-end;
+}
+
+.display-container > span{
+        font-size: .5em;
+        line-height: 1.5em;
+}
+
+
+/**TURN */
+.turn-container{
+        grid-area: turn;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 7.4em;
+        height: 7.4em;
+        overflow-y: scroll;
+        opacity: 0;
+}
+
+.turn-container > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        font-size: max(1.1em, 17px);
+        padding: 0 .3em;
+}
+
+.turn-container > div:not(:last-of-type){
+        border-bottom: 1px solid #8c8c8c3a;
+}
+
+
+/**RESPONSIVE */
+@media (max-width: 375px) and (min-width: 321px){
+        .display-container{
+                font-size: 7.5em;
+        }
+}
+
+@media (max-width: 320px){
+        .display-container{
+                font-size: 7.2em;
+        }
+        
+        .turn-container {
+                margin: 0 auto 1.5em auto;
+        }
+
+        .turn-container > div{
+                font-size: max(1.1em, 16px);
+        }
+}

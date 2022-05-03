@@ -1,0 +1,85 @@
+.about-container{
+        margin-top: min(8em, 60px);
+        padding: 5%;
+        max-height: 100vh;
+        width: 100vw;
+}
+
+.about-tool p{
+        font-size: 17px;
+        text-align: justify;
+        text-indent: 1.5em;
+        color: var(--primary-color);
+        padding: 0 2% ;
+}
+
+.profile-card{
+        max-width: 425px;
+        overflow: hidden;
+        margin: 3em auto 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-top{
+        background: var(--primary-color);
+        color: var(--secondary-color);
+}
+
+.card-top,
+.card-bottom{
+        padding: 3em 0;
+}
+
+.profile-photo{
+        width: 7em;
+        height: 7em;
+        background-color: var(--terciary-color);
+        border-radius: 50%;
+        margin: 0 auto;
+}
+
+.name{
+        font-size: min(20px, 2em);
+        text-transform: uppercase;
+        width: fit-content;
+        margin: .5em auto 0 auto;
+}
+
+.skills{
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+}
+
+.skill{
+        font-size: 17px;
+        font-weight: 300;
+        color: var(--terciary-color);
+}
+
+.skills span{
+        height: 17px;
+        width: .5px;
+        background: var(--terciary-color);
+}
+
+.card-bottom{
+        background-color: var(--secondary-color);
+}
+
+.social-media{
+        margin: 0 auto;
+        width: fit-content;
+}
+
+.social-media img{
+        width: 35px;
+        filter: invert(10%) sepia(20%) saturate(6775%) hue-rotate(192deg) brightness(92%) contrast(102%);
+        cursor: pointer;
+}
+
+.social-media img+img{
+        margin: 0 0 0 1em;
+}

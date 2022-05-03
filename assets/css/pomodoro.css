@@ -1,0 +1,216 @@
+.pomo-container{
+        height: 100vh;
+        width: 100vw;
+        padding: 5%;
+        font-family: 'Bebas Neue', cursive;
+        display: grid;
+        grid-template-areas: 'display' 'btns';
+        color: var(--primary-color);
+}
+
+.pomo-container,
+.pomo-container *{
+        z-index: 0;
+}
+
+/**DISPLAY */
+.pomo-display{
+        grid-area: display;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: max(.5em, 8px);
+        padding-bottom: max(.5em, 8px);
+}
+
+.display-container{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid var(--primary-color);
+        border-radius: 50%;
+        overflow: hidden;
+}
+
+.session-display > span,
+.next-display > span{
+        font-size: .8em;
+        height: 100%;
+}
+
+.session-display > span{
+        line-height: 1em;
+}
+
+.session-display,
+.next-display{
+        font-size: max(1.7em, 30.056px);
+        line-height: .86em;
+        height: .75em;
+}
+
+.current-display{
+        font-size: max(5em, 88.4px);
+        line-height: .86em;
+        height: .75em;
+}
+
+.current-display > div{
+        font-size: 1em;
+}
+
+.current-display > span{
+        font-size: .6em;
+        line-height: 1.2em;
+        height: 100%;
+}
+
+.session-display,
+.current-display,
+.next-display{
+        display: inline-flex;
+}
+
+.next-display > span{
+        line-height: .9em;
+}
+
+
+/**CLOCK SETTINGS */
+.clockSettings-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--secondary-color);
+        font-family: 'Oswald', sans-serif;
+        transform: translateX(100%);
+        transition: transform .4s ease;
+}
+
+.clockSettings-container.show{
+        transform: translateX(0);
+}
+
+.clockSettings-container > ul{
+        width: 100%;
+        text-align: center;
+}
+
+.clockSettings-container > ul > li{
+        width: 75%;
+        padding: .5em;
+        border-bottom: 1px solid #8c8c8c9a;
+        text-align: center;
+        margin: 0 auto;
+}
+
+.clockSettings-container > ul > li:first-of-type{
+        border-top: 1px solid #8c8c8c9a;
+}
+
+.inpt-container{
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+}
+
+.inpt-container > input{
+        font-size: max(2.5em, 36px);
+        font-family: 'Bebas Neue', cursive;
+        width: 1.1em;
+        height: 1.1em;
+        text-align: center;
+        color: var(--secondary-color);
+        background-color: transparent;
+        border: none;
+        padding: .1em;
+        border-bottom: 1px solid transparent;
+}
+
+.inpt-container > input:focus{
+        border-bottom: 1px solid var(--secondary-color);
+        outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.next,
+.prev{
+        font-size: max(2em, 36px);
+        cursor: pointer;
+        text-align: center;
+}
+
+.next:active,
+.prev:active{
+        transform: scale(.95);
+}
+
+.clockSettings-container .btn{
+        margin: 20px 0 0 0;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        font-family: 'Bebas Neue', cursive;
+}
+
+.clockSettings-container .btn span{
+        background: var(--primary-color);
+}
+
+.clockSettings-container .btn:hover{
+        background-color: var(--secondary-color);
+}
+
+.clockSettings-container .btn:hover p{
+        color: var(--primary-color) !important;
+}
+
+.warning{
+        font-size: 13px;
+        color: #f00;
+        border: none !important;
+}
+
+/**RESPONSIVE */
+@media(max-width: 426px){
+        .clockSettings-container{
+                width: 100vw;
+        }
+}
+
+@media (max-width: 321px){
+        .display-container{
+                height: 250px;
+                width: 250px;
+        }
+
+        .session-display,
+        .next-display{
+                font-size: 2.2em;
+                line-height: .86em;
+                height: .75em;
+        }
+}

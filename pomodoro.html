@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/pomodoro.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <title class="doctitle">sbtools - pomodoro</title>
+</head>
+<body class="noselect">        
+        <div class="theme-container">
+                <img src="assets/imgs/dark-mode.svg" alt="" class="light">
+        </div>
+
+        <nav class="navbar">
+                <div class="navbar-brand">
+                        <img src="assets/imgs/logoblue.png" alt="sblogo" class="logo">
+                </div>
+
+                <div class="menu-toggle close">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                </div>
+
+                <div class="menu-container">
+                        <h3 class="title">MENU</h3>
+
+                        <ul class="navbar-menu">
+                                <ul class="navbar-menu">
+                                        <li><a href="home.html">cronômetro</a></li>
+                                        <li><a href="timer.html">timer</a></li>
+                                        <li><a href="pomodoro.html" class="active">pomodoro</a></li>
+                                        <li><a href="tabata.html">tabata</a></li>
+                                </ul>
+                        </ul>
+                </div>
+        </nav>
+
+        <main class="pomo-container">
+                <div class="pomo-display">
+                        <div class="display-container">
+                                <div class="session-display">
+                                        <div class="session-current">00</div>
+                                        <span>/</span>
+                                        <div class="session-total">00</div>
+                                </div>
+                                <div class="current-display">
+                                        <div class="current-mins">00</div>
+                                        <span>:</span>
+                                        <div class="current-secs">00</div>
+                                </div>
+                                <div class="next-display">
+                                        <div class="next-mins">00</div>
+                                        <span>:</span>
+                                        <div>00</div>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="action-btns">
+                        <a class="start btn show" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">iniciar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="edit btn show" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">editar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="pause btn" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">pausar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                        <a class="reset btn" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">parar</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                </div>
+
+                <div class="clockSettings-container">
+                        <h3 class="title">configurações</h3>
+
+                        <ul>
+                                <li>
+                                        <p class="subtitle">pomodoro</p>
+                                        <div class="inpt-container">
+                                                <span class="material-icons-outlined prev">
+                                                        chevron_left
+                                                </span>
+                                                <input type="number" class="pomo-inpt" value="00" name="pomodoro">
+                                                <span class="material-icons-outlined next">
+                                                        chevron_right
+                                                </span>
+                                        </div>
+                                </li>
+                                <li>
+                                        <p class="subtitle">pausa pequena</p>
+                                        <div class="inpt-container">
+                                                <span class="material-icons-outlined prev">
+                                                        chevron_left
+                                                </span>
+                                                <input type="number" class="smallP-inpt" value="00" name="small_pause">
+                                                <span class="material-icons-outlined next">
+                                                        chevron_right
+                                                </span>
+                                        </div>
+                                </li>
+                                <li>
+                                        <p class="subtitle">pausa longa</p>
+                                        <div class="inpt-container">
+                                                <span class="material-icons-outlined prev">
+                                                        chevron_left
+                                                </span>
+                                                <input type="number" class="longP-inpt" value="00" name="long_pause">
+                                                <span class="material-icons-outlined next">
+                                                        chevron_right
+                                                </span>
+                                        </div>
+                                </li>
+                                <li>
+                                        <p class="subtitle">pomodoros até uma pausa longa</p>
+                                        <div class="inpt-container">
+                                                <span class="material-icons-outlined prev">
+                                                        chevron_left
+                                                </span>
+                                                <input type="number" class="untilP-inpt" value="00" name="untilL_pause">
+                                                <span class="material-icons-outlined next">
+                                                        chevron_right
+                                                </span>
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="subtitle">sessões</div>
+                                        <div class="inpt-container">
+                                                <span class="material-icons-outlined prev">
+                                                        chevron_left
+                                                </span>
+                                                <input type="number" class="session-inpt" value="00" name="sessions">
+                                                <span class="material-icons-outlined next">
+                                                        chevron_right
+                                                </span>
+                                        </div>
+                                </li>
+                                <div class="warning">&nbsp;</div>
+                        </ul>
+
+                        <a class="ok btn show" href="#">
+                                <span class="top-line"></span>
+                                <span class="left-line"></span>
+                                <p class="text">ok</p>
+                                <span class="right-line"></span>
+                                <span class="bottom-line"></span>
+                        </a>
+                </div>
+        </main>
+
+        <audio class="beep" src="assets/audio/beep.mp3"></audio>
+        <audio class="beep2" src="assets/audio/beep2.mp3"></audio>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/pomodoro.js"></script>
+</body>
+</html>
